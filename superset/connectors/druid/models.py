@@ -666,8 +666,9 @@ class DruidDatasource(Model, BaseDatasource):
         }
 
         granularity = {'type': 'period'}
-        if timezone:
-            granularity['timeZone'] = timezone
+        # if timezone:
+        #     granularity['timeZone'] = timezone
+        granularity['timeZone'] = "Asia/Shanghai"
 
         if origin:
             dttm = utils.parse_human_datetime(origin)
